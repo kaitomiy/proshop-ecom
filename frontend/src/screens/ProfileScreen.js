@@ -143,7 +143,7 @@ const ProfileScreen = ({ location, history }) => {
                   </td>
                   <td>
                     {order.isDelivered ? (
-                      order.deliveredAt.subString(0, 10)
+                      order.deliveredAt.substring(0, 10)
                     ) : (
                       <div
                         className='fas fa-times'
@@ -152,7 +152,7 @@ const ProfileScreen = ({ location, history }) => {
                     )}
                   </td>
                   <td>
-                    <LinkContainer to={`/orders/${order._id}`}>
+                    <LinkContainer to={`/order/${order._id}`}>
                       <Button className='btn-sm' variant='light'>
                         Details
                       </Button>

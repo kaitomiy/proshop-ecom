@@ -41,11 +41,12 @@ const CartScreen = ({ match, location, history }) => {
   return (
     <Row>
       <Col md={8}>
+        <Link className='btn btn-light' to='/'>
+          Go Back
+        </Link>
         <h1>Shopping cart</h1>
         {cartItems.length === 0 ? (
-          <Messgae>
-            Your cart is empty <Link to='/'>Go back</Link>
-          </Messgae>
+          <Messgae>Your cart is empty</Messgae>
         ) : (
           <ListGroup variant='flush'>
             {cartItems.map((item) => (

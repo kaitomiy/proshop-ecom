@@ -16,6 +16,7 @@ import {
   ORDER_PAY_RESET,
   ORDER_DELIVER_RESET,
 } from '../constants/orderConstants';
+import { clearCart } from '../actions/cartActions';
 
 const OrderScreen = ({ match, history }) => {
   const orderId = match.params.id;
@@ -82,6 +83,8 @@ const OrderScreen = ({ match, history }) => {
     console.log(paymentResult);
 
     dispatch(payOrder(orderId, paymentResult));
+
+    dispatch(clearCart());
   };
 
   const deliverHandler = () => {

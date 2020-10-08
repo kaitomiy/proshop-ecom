@@ -42,7 +42,7 @@ const CartScreen = ({ match, location, history }) => {
     <Row>
       <Col md={8}>
         <Link className='btn btn-light' to='/'>
-          Go Back
+          <i className='fas fa-chevron-left'></i> Go Back
         </Link>
         <h1>Shopping cart</h1>
         {cartItems.length === 0 ? (
